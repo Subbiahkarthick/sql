@@ -1,0 +1,37 @@
+       <?php
+            $dbc = mysqli_connect('localhost', 'root','', 'Coronavirus');
+            $sql = "CREATE TABLE IF NOT EXISTS Data(NameoftheDistrict VARCHAR(64)  NOT NULL AUTO_INCREMENT,
+                    AffectedPersons INT  NOT NULL AUTO_INCREMENT, DischargedPersons INT  NOT NULL AUTO_INCREMENT,DeathCount INT  NOT NULL AUTO_INCREMENT)";
+
+            $result = mysqli_query($dbc,$sql) or die("Bad create: $sql");
+            
+            $NameoftheDistrict = $_post['NameoftheDistrict'];
+            $AffectedPersons =  $_post['AffectedPersons'];
+            $DischargedPersons = $_post['DischargedPersons'];
+            $DeathCount =  $_post['DeathCount'];
+            
+            $sql= "INSERT INTO Data(Data_NameoftheDistrict,Data_AffectedPersons,Data_DischargedPersons,Data_DeathCount) VALUES('$NameOftheDistrcit','$AffectedPersons','$DischargedPersons','$DeathCount');";
+                   mysqli_query($conn, $sql);
+       
+            header("Location: ../insert.php?signup=success");
+       ?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Corona Virus Database</title>
+    </head>
+    <body>
+        <h2>Corona Virus Database</h2>
+        <form>
+            NameoftheDistrict : <input type="text" name="Nameofthedistrict"><br>
+            <br>
+            AffectedPersons: <input type="number" name="AffectedPersons"><br>
+            <br>
+            DischargedPersons:<input type="number" name="DischargedPersons"><br>
+            <br>
+            DeathCount: <input type="number" name="DeathCount"><br>
+            <br>
+            <input type="submit">
+      </form>
+    </body>
+</html>    
