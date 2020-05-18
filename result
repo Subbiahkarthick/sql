@@ -1,0 +1,37 @@
+
+    <?php
+    
+     session_start();
+?>
+  <?php
+       
+       $tam='tamil';
+       $eng='english';
+       $mat='maths';
+       $sci='science';
+       $soc='social';
+    ?>
+    
+<html>    
+    <form method="post" action="newregistration.php">;
+ <center>
+     <table border="1">
+     
+         <tr>
+         <td>   
+             <table border=1 width=100%>
+                 <tr><th><i>Subject code</i></th><th><i>Subject Name</i></th><th><i>Marks obtained</i></th></tr>
+                 <tr><td>01</td><td>tamil</td><td><?php echo "$tamil";?></td></tr>      
+                 <tr><td>02</td><td>english</td><td><?php echo "$english";?></td></tr>
+                 <tr><td>03</td><td>maths</td><td><?php echo "$maths";?></td></tr>
+                 <tr><td>04</td><td>science</td><td><?php echo "$science";?></td></tr>
+                 <tr><td>05</td><td>social</td><td><?php echo "$social";?></td></tr>
+                 <br>
+                 <input type="submit" alt="For new registration">
+             </table>
+         </td>
+         </tr>
+     </table>
+</center>
+    </form>
+</html>
