@@ -1,0 +1,65 @@
+<?php 
+  
+ $dbServername = "localhost";
+ $dbUsername ="root";
+ $dbPassword ="";
+ $dbName ="student";
+
+$conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
+
+?>
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+    </style>
+    </head>
+<body>
+    <form action = result.php method="post">
+    <table>
+      <caption>Student Marklist form</caption>
+        <tr>
+          <td>Student Name</td>
+           <td><input type=text name=stn size=30></td>
+        </tr>
+        <tr>
+          <td>School Name</td>
+          <td><input type=text name=sn size=30></td>
+           <tr>
+          <td>Roll number</td>
+          <td><input type="number" name=rollno size=30></td>
+        </tr>
+          <tr>
+          <td>Gender</td>
+          <td><input type=radio name=gen size=30 value="male">male<input type=radio name=gen size=30 value="female">female</td>
+        </tr>
+          <th>Subject-wise Marks</th>
+          <tr>
+          <td>Tamil </td>
+          <td><input type=text name=tam size=30></td>
+        </tr>
+          <tr>
+          <td>English</td>
+          <td><input type=text name=eng size=30></td>
+        </tr>
+          <tr>
+          <td>Maths</td>
+          <td><input type=text name=mat size=30></td>
+        </tr> 
+        <tr>
+          <td>Science</td>
+          <td><input type=text name=sci size=30></td>
+        </tr>
+         <tr>
+          <td>Social</td>
+          <td><input type=text name=soc size=30></td>
+        </tr>
+         <tr>
+          <td><input type=submit></td>
+          <td><input type=reset></td>
+        </tr>
+        </table>
+    </form>
+    
